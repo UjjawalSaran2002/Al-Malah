@@ -285,7 +285,7 @@ async function getImageList(folderName){
 
 }
 async function getFolderList(){
-    let a =await fetch("/images/")
+    let a =await fetch("Al-Malah/images")
     let response=await a.text()
     let bs=document.createElement("div")
     bs.innerHTML=response
