@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Malah Building Contg LLC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                
+                <li>
+                    <button class="home-button" onclick="scrollToTop()">Home</button>
+                </li>
+                <li>
+                    <button class="about-button">About</button>
+                </li>
+                <li>
+                    <button class="contact-button">Contact Us</button>
+                </li>
+        </ul>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="aestheticimage">
+            <img src="/files/images/construction-quotes-hero.webp" alt="">
+        </div>
+        <div class="aequo">
+            <div class="quote">
+                <h1>When we build, let us think that we build forever.</h1>
+            </div>
+            <div class="aesthetic">
+                
+            </div>
+        </div>
+        <div class="name">
+
+            <h2>Al Malah Bulding Contg L.L.C</h2>
+            <h4>Since 2007</h4>
+        </div>
+        <div class="portfolio">
+            <div class="gallery">
+                <!-- <div class="card" >
+                    <img src="/images/villa1/villa1_thumb.jpeg" alt="Villa 1">
+                    <div class="card-text">Villa 1</div>
+                </div>
+             -->
+                <!-- <div class="card" onclick="showGallery('villa2', 0)">
+                    <img src="villa2_thumb.jpg" alt="Villa 2">
+                    <div class="card-text">Villa 2</div>
+                </div> -->
+                <!-- Add more cards as needed -->
+            </div>
+            
+            <div id="gallery-modal" class="modal">
+                <span class="close" onclick="closeGallery()">&times;</span>
+                <div id="gallery-content" class="gallery-content">
+                    <!-- <img src="/images/villa1/image2.jpg" alt=""> -->
+                    <img src="/svgs/next.svg" alt="">
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    <div class="contact-modal" id="contactModal">
+        <div class="contact-modal-content">
+            <span class="close-button" id="closeModalButton">&times;</span>
+            <h2>Contact Information</h2>
+            <p>Email: sureshsaran092@gmail.com</p>
+            <p>Phone: +971567252501</p>
+        </div>
+    </div>
+    <div class="about-modal" id="aboutModal">
+        <div class="about-modal-content">
+            <span class="close-button" id="closeAboutModalButton">&times;</span>
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo urna.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo urna.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
