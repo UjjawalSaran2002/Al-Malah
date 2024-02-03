@@ -268,20 +268,33 @@ window.onclick = function(event) {
         modal.style.display = 'none';
     }
 };
-async function getImageList(folderName){
-    let a =await fetch(`./images/${folderName}/`)
-    let response=await a.text()
-    let fs=document.createElement("div")
-    fs.innerHTML=response
-    let imglist=fs.getElementsByTagName("a")
-    let finlist=[]
-    imgs=Array.from(imglist)
-    imgs.forEach(element => {
-        if(element.textContent.includes("jpeg")||element.textContent.includes("jpg")){
-            finlist.push(element.textContent)
-        }
-    });
-    return finlist;
+async function getImageList(k){
+    // let a =await fetch(`./images/${folderName}/`)
+    // let response=await a.text()
+    // let fs=document.createElement("div")
+    // fs.innerHTML=response
+    // let imglist=fs.getElementsByTagName("a")
+    // let finlist=[]
+    // imgs=Array.from(imglist)
+    // imgs.forEach(element => {
+    //     if(element.textContent.includes("jpeg")||element.textContent.includes("jpg")){
+    //         finlist.push(element.textContent)
+    //     }
+    // });
+     // Sample data
+var array1 = ["villa1_thumb.jpeg", "wharsjhgfjsdka sdkfdskff.jpg"];
+var array2 = ["WhatsApp Image 2024-01-31 at 02.30.09 (1).jpeg", "WhatsApp Image 2024-01-31 at 02.30.09.jpeg", "image1.jpeg", "villa2_thumb.jpeg"];
+var array3 = ["image10.jpg", "image11.jpeg", "image12.jpeg", "image6.jpeg", "image7.jpg", "image8.jpeg", "image9.jpeg", "villa3_thumb.jpeg"];
+var array4 = ["villa4_thumb.jpeg"];
+
+// Create a single 2D array
+var single2DArray = [array1, array2, array3, array4];
+
+// Log the single 2D array
+
+
+    // console.log(finlist)
+    return single2DArray[k];
 
 }
 async function getFolderList(){
@@ -304,11 +317,13 @@ async function getFolderList(){
             folderList.push(folderName);
         }
     }
-    console.log(folderList)
+    folderList=["villa1/", "villa2/", "villa3/", "villa4/"];
     return folderList;
 }
 async function main(){
     let folderList=await getFolderList();
+   
+
    
 
 
@@ -343,7 +358,7 @@ async function main(){
         let cardlist=document.querySelector(".gallery").children
         for (let k=0;k<cardlist.length;k++) {
         
-            let imagelist=await getImageList(folderList[k]);
+            let imagelist=await getImageList(k);
 
             // console.log(folderList[k]+"hello")
             if(cardlist[k] instanceof Element){
