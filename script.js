@@ -269,7 +269,7 @@ window.onclick = function(event) {
     }
 };
 async function getImageList(folderName){
-    let a =await fetch(`resplendent-fudge-0fed80/images/${folderName}/`)
+    let a =await fetch(`./images/${folderName}/`)
     let response=await a.text()
     let fs=document.createElement("div")
     fs.innerHTML=response
@@ -285,7 +285,7 @@ async function getImageList(folderName){
 
 }
 async function getFolderList(){
-    let a =await fetch("resplendent-fudge-0fed80/images/")
+    let a =await fetch("./images/")
     let response=await a.text()
     let bs=document.createElement("div")
     bs.innerHTML=response
