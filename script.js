@@ -1,9 +1,9 @@
 let quote=document.querySelector(".quote")
 async function showGallery(villaName, startIndex) {
     
-    let currentImage= `/images/${villaName}`
+    let currentImage= `/imag/${villaName}`
     var galleryContent = document.getElementById('gallery-content');
-    galleryContent.innerHTML=galleryContent.innerHTML+`<img src="/images/${villaName}/image2.jpg" alt=""></img>`
+    galleryContent.innerHTML=galleryContent.innerHTML+`<img src="/imag/${villaName}/image2.jpg" alt=""></img>`
 
 
 
@@ -78,7 +78,7 @@ async function showGallery(villaName, startIndex) {
 //     // for (const index in images) {
         
 //     //     var img = document.createElement('img');
-//     //     img.src = "/images/"+imageFolder +"/"+ images[index];
+//     //     img.src = "/imag/"+imageFolder +"/"+ images[index];
 //     //     img.className = 'modal-image';
         
 //     //     // Append the image to the modal
@@ -101,7 +101,7 @@ async function showGallery(villaName, startIndex) {
 
 //     // Create a new image element for the selected image
 //     var selectedImage = document.createElement('img');
-//     selectedImage.src = `/images/${imageFolder}/${images[selectedIndex]}`;
+//     selectedImage.src = `/imag/${imageFolder}/${images[selectedIndex]}`;
 //     selectedImage.className = 'modal-selected-image';
 
 //     // Append the selected image to the modal
@@ -115,7 +115,7 @@ async function showGallery(villaName, startIndex) {
 //     for (let i = 0; i < images.length; i++) {
 //         if (i !== selectedIndex) {
 //             var img = document.createElement('img');
-//             img.src = `/images/${imageFolder}/${images[i]}`;
+//             img.src = `/imag/${imageFolder}/${images[i]}`;
 //             img.className = 'modal-small-image';
 
 //             // Attach an event listener to the small images for further interaction
@@ -157,7 +157,7 @@ async function showImageModal(imageFolder, images, selectedIndex) {
     var selectedImageDiv=document.createElement('div');
     var selectedImage = document.createElement('img');
     selectedImageDiv.innerHTML=selectedImage;
-    selectedImage.src = `/images/${imageFolder}/${images[selectedIndex]}`;
+    selectedImage.src = `/imag/${imageFolder}/${images[selectedIndex]}`;
     selectedImageDiv.className = 'modal-selected-image';
     
     
@@ -173,7 +173,7 @@ async function showImageModal(imageFolder, images, selectedIndex) {
     for (let i = 0; i < images.length; i++) {
         if (i !== selectedIndex) {
             var img = document.createElement('img');
-            img.src = `/images/${imageFolder}/${images[i]}`;
+            img.src = `/imag/${imageFolder}/${images[i]}`;
             img.className = 'modal-small-image';
             
             // Attach an event listener to the small images for further interaction
@@ -269,7 +269,7 @@ window.onclick = function(event) {
     }
 };
 async function getImageList(folderName){
-    let a =await fetch(`/images/${folderName}/`)
+    let a =await fetch(`/imag/${folderName}/`)
     let response=await a.text()
     let fs=document.createElement("div")
     fs.innerHTML=response
@@ -285,7 +285,7 @@ async function getImageList(folderName){
 
 }
 async function getFolderList(){
-    let a =await fetch("/images/")
+    let a =await fetch("/imag/")
     let response=await a.text()
     let bs=document.createElement("div")
     bs.innerHTML=response
@@ -328,7 +328,7 @@ async function main(){
     for (const i in folderList ) { //this for loop is to create multiple cards
         folderList[i]=folderList[i].replace("/","")
         let card= `<div class="card" >
-        <img src="/images/${folderList[i]}/${folderList[i]}_thumb.jpeg" alt="${folderList[i]}">
+        <img src="/imag/${folderList[i]}/${folderList[i]}_thumb.jpeg" alt="${folderList[i]}">
         <div class="card-text">Villa ${i}</div>
         </div>`
         gallery.innerHTML=gallery.innerHTML+card
