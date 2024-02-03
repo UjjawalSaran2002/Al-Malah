@@ -304,6 +304,7 @@ async function getFolderList(){
             folderList.push(folderName);
         }
     }
+    folderList=["villa1/", "villa2/", "villa3/", "villa4/"]
     return folderList;
 }
 async function main(){
