@@ -35,6 +35,7 @@ button{
     /* background-color: aqua; */
     /* border: 2px solid ; */
 }
+
 .navbar ul :hover{
     text-decoration: underline;
     text-underline-offset: 10px;
@@ -105,13 +106,14 @@ button{
 .name{
     height: 17vw;
     width: 100vw;
-    background-color: #f2f2f2;
+    background-color: #fbfcfc;
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 83vh;
+    z-index: 1;
    
     
 }
@@ -202,8 +204,8 @@ position: relative;
 
 .close {
     position: absolute;
-    top: 15px;
-    right: 35px;
+    top: 12vh;
+    left: 78vw;
     font-size: 40px;
     font-weight: bold;
     color: #fff;
@@ -231,6 +233,10 @@ align-items: center;
     .modal-selected-image>img{
         max-width: 88%;
         margin-top: 100px;
+    }
+    .close{
+        top:20vh;
+        left: 86vw;
     }
 }
 .modal-rest-images{
