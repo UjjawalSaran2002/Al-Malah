@@ -398,9 +398,10 @@ async function main(){
 
     for (const i in folderList ) { //this for loop is to create multiple cards
         folderList[i]=folderList[i].replace("/","")
+        let j=parseInt(i, 10)+1;
         let card= `<div class="card" >
         <img src="/images/${folderList[i]}/${folderList[i]}_thumb.jpeg" alt="${folderList[i]}">
-        <div class="card-text">Villa ${i}</div>
+        <div class="card-text">Villa ${j}</div>
         </div>`
         gallery.innerHTML=gallery.innerHTML+card
         // let eachvill=document.querySelector(".card")
