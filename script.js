@@ -282,15 +282,71 @@ async function getImageList(k){
     //     }
     // });
      // Sample data
-var array1 = ["villa1_thumb.jpeg", "wharsjhgfjsdka sdkfdskff.jpg"];
-var array2 = ["WhatsApp Image 2024-01-31 at 02.30.09 (1).jpeg", "WhatsApp Image 2024-01-31 at 02.30.09.jpeg", "image1.jpeg", "villa2_thumb.jpeg"];
-var array3 = ["image10.jpg", "image11.jpeg", "image12.jpeg", "image6.jpeg", "image7.jpg", "image8.jpeg", "image9.jpeg", "villa3_thumb.jpeg"];
-var array4 = ["villa4_thumb.jpeg"];
+var array1 = ['villa1_thumb.jpeg','WhatsApp Image 2024-02-04 at 11.52.15.jpeg','WhatsApp Image 2024-02-04 at 11.52.16 (1).jpeg','WhatsApp Image 2024-02-04 at 11.52.16.jpeg','WhatsApp Image 2024-02-04 at 11.52.17.jpeg','WhatsApp Image 2024-02-04 at 11.52.18.jpeg','WhatsApp Image 2024-02-04 at 11.52.19 (1).jpeg','WhatsApp Image 2024-02-04 at 11.52.19.jpeg','WhatsApp Image 2024-02-04 at 11.52.20 (1).jpeg','WhatsApp Image 2024-02-04 at 11.52.20.jpeg','WhatsApp Image 2024-02-04 at 11.52.21.jpeg','WhatsApp Image 2024-02-04 at 11.52.22 (1).jpeg','WhatsApp Image 2024-02-04 at 11.52.22.jpeg','WhatsApp Image 2024-02-04 at 11.52.23.jpeg','WhatsApp Image 2024-02-04 at 11.52.24 (1).jpeg','WhatsApp Image 2024-02-04 at 11.52.24.jpeg','WhatsApp Image 2024-02-04 at 11.52.25 (1).jpeg','WhatsApp Image 2024-02-04 at 11.52.25.jpeg','WhatsApp Image 2024-02-04 at 11.52.27 (1).jpeg','WhatsApp Image 2024-02-04 at 11.52.27.jpeg','WhatsApp Image 2024-02-04 at 11.52.28.jpeg','WhatsApp Image 2024-02-04 at 11.52.29 (1).jpeg','WhatsApp Image 2024-02-04 at 11.52.29.jpeg','WhatsApp Image 2024-02-04 at 11.52.30 (1).jpeg','WhatsApp Image 2024-02-04 at 11.52.30.jpeg','WhatsApp Image 2024-02-04 at 11.52.31 (1).jpeg','WhatsApp Image 2024-02-04 at 11.52.31.jpeg','WhatsApp Image 2024-02-04 at 11.52.32.jpeg','WhatsApp Image 2024-02-04 at 11.52.34.jpeg','WhatsApp Image 2024-02-04 at 11.52.35.jpeg','WhatsApp Video 2024-02-04 at 11.52.34.mp4'];
+var array2 = [ 'villa2_thumb.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.05.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.06 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.06.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.07.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.08.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.09 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.09.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.10 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.10.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.11 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.11.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.12.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.13 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.13.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.14 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.14.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.15 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.15.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.16.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.19.jpeg',
+'WhatsApp Video 2024-02-04 at 11.54.05.mp4'];
+var array3 = [ 'villa3_thumb.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.44 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.44.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.45 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.45.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.46 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.46.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.47 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.47 (2).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.47.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.48 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.48.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.49.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.50 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.50.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.51 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.51.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.52 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.52.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.53 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.53.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.54 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.54.jpeg',
+'WhatsApp Image 2024-02-04 at 11.54.55.jpeg'];
+var array4 = [ 'villa4_thumb.jpeg',
+'WhatsApp Image 2024-02-04 at 11.57.37 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.57.39.jpeg',
+'WhatsApp Image 2024-02-04 at 11.57.40 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.57.40.jpeg',
+'WhatsApp Image 2024-02-04 at 11.57.41.jpeg',
+'WhatsApp Image 2024-02-04 at 11.57.42 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.57.42.jpeg',
+'WhatsApp Image 2024-02-04 at 11.57.43 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.57.43 (2).jpeg',
+'WhatsApp Image 2024-02-04 at 11.57.43.jpeg',
+'WhatsApp Image 2024-02-04 at 11.57.44 (1).jpeg',
+'WhatsApp Image 2024-02-04 at 11.57.44.jpeg'];
 
-// Create a single 2D array
+
 var single2DArray = [array1, array2, array3, array4];
 
-// Log the single 2D array
+
 
 
     // console.log(finlist)
