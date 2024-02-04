@@ -155,16 +155,16 @@ async function showImageModal(imageFolder, images, selectedIndex) {
     
     // Create a new image element for the selected image
     var selectedImageDiv=document.createElement('div');
-    var selectedImage = document.createElement('img');
-    selectedImageDiv.innerHTML=selectedImage;
-    selectedImage.src = `/images/${imageFolder}/${images[selectedIndex]}`;
     selectedImageDiv.className = 'modal-selected-image';
+    var selectedImage = document.createElement('img');
+    selectedImage.src = `/images/${imageFolder}/${images[selectedIndex]}`;
+    // selectedImageDiv.innerHTML=selectedImage;
     
     
     
     // Append the selected image to the modal
-    galleryContent.appendChild(selectedImageDiv);
     selectedImageDiv.appendChild(selectedImage);
+    galleryContent.appendChild(selectedImageDiv);
     // Create a container for the rest of the images
     var restImagesContainer = document.createElement('div');
     restImagesContainer.className = 'modal-rest-images';
