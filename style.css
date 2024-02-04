@@ -1,3 +1,7 @@
+:root{
+    --mainFont:2vw;
+    --subFont:1.5vw;
+}
 *{
     padding: 0;
     margin: 0;
@@ -5,6 +9,13 @@
 body{
     background-color: antiquewhite;
 }
+button{
+    background:transparent;
+    color: white;
+    border: 0px;
+    font-size: 15px;
+}
+
 .navbar ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -34,6 +45,7 @@ body{
 .navbar{
     background-color: rgb(2, 32, 60);
     height: 10vh;
+    border: 3px solid black;
     position: sticky;
     top: 0px;
     z-index: 5;
@@ -41,7 +53,7 @@ body{
 .aestheticimage *{
     object-fit: cover;
     position: relative;
-    height: 70vh;
+    height: 90vh;
     width: 100vw;
 }
 .aesthetic{
@@ -56,11 +68,11 @@ body{
 .quote{
     position: relative;
     z-index: 2;
-    top: -35vh;
-    left: 5vw;
-    height: 120px;
+    top: -89vh;
+    left: 1vw;
+    height: 12vw;
     width: 40vw;
-    background-color: beige;
+    /* background-color: beige; */
     opacity: 1;
     display: flex;
     justify-content: center;
@@ -68,42 +80,88 @@ body{
     /* font-size: large; */
     font-family: 'Arial Narrow', Arial, sans-serif;
     padding: 20px;
+    font-size: 1.5vw;
+}
+@media only screen and(max-width:700px){
+    .quote{
+        top: -70vh;
+        left: 55vw;
+    }
 }
 .card img{
     /* background-color: brown; */
     height: 200px;
     width: 200px;
     object-fit: cover;
+  
 }
 .card {
     width: 200px;
     /* height: 200px; */
     margin: 10px;
     cursor: pointer;
+    margin: 40px 40px;
 }
 .name{
-    height: 200px;
+    height: 17vw;
     width: 100vw;
     background-color: #f2f2f2;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: -19vh;
+    position: absolute;
+    top: 83vh;
+   
+    
+}
+@media only screen and (max-width:700px){
+    .name{
+        flex-direction: column;
+    }
+}
+.nameEng{
+    /* border: 2px solid black; */
+    padding: 10px;
+    margin-right: 1vw;
+    display: flex;
+    color: color(srgb 0.1595 0.2053 0.2934);
+    font-size: var(--mainFont);
+}
+.nameArab{
+    /* border: 2px solid black; */
+    height: 46px;
+    /* padding: 10px; */
+    margin-left: 1vw;
+    color: color(srgb 0.1595 0.2053 0.2934);
+    font-size: var(--mainFont);
+   
+}
+.logo{
+    height: 5vw;
+
+}
+.subDetails{
+    display: flex;
+font-size: var(--subFont);
+}
+.subDetails *{
+    margin: 2px;
 }
 
-.card> img {
-    border: 2px solid black;
-    background-color: beige;
+.card> img{
+    /* border: 2px solid black; */
+background-color: color(srgb 0.0126 0.169 0.315);
+    border-radius: 20px;
     width: 100%;
     height: 200px ;
     object-fit: contain;
     /* background-color: aqua; */
+    box-shadow: 0px 4px 8px white;
 }
 .card >img:hover,.card:hover{
     border: 0px;
-    background-color: beige;
+    /* background-color: beige; */
     width: 220px;
     height: 220px ;
     transition: all 1s ;
@@ -169,19 +227,31 @@ align-items: center;
     max-height: 100%;
     object-fit: contain;
 }
+@media only screen and (max-width:700px){
+    .modal-selected-image>img{
+        max-width: 88%;
+        margin-top: 100px;
+    }
+}
 .modal-rest-images{
     display: flex;
 }
 .gallery{
     display: flex;
+    /* flex-direction: column; */
     flex-wrap: wrap;
+}
+@media only screen and (max-width:700px){
+    .gallery{
+        flex-direction: column;
+    }
 }
 .portfolio{
     position: relative;
     top: -15vh;
     height: fit-content;
     width: 100vw;
-    background-color: rgb(94, 217, 231);
+    background-color: rgb(2, 32, 60);
     display: flex;
     justify-content: center;
     align-items: center;

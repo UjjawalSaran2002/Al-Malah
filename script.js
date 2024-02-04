@@ -471,15 +471,15 @@ async function main(){
             document.getElementById('aboutModal').style.display = 'none';
         }
     });
-    function scrollToTop() {
-        // Scroll to the top with smooth behavior
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
+    
 
 }
-
+function scrollToTop() {
+    // Scroll to the top with smooth behavior
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
 
 main()
